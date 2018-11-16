@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/test_menu"
+        app:showAsAction="never"
+        android:title="加入家庭" />
+    <item
+        android:id="@+id/test_menu2"
+        app:showAsAction="never"
+        android:title="退出家庭" />
+
+</menu>

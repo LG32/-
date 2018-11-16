@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">冰箱伴侣</string>
+    <string name ="food">食材</string>
+    <string name ="foodmenu">食谱</string>
+    <string name = "record">健康建议</string>
+    <string name = "me">我</string>
+    <string name="select_date">选择时间</string>
+    <string name="current_date">当前时间</string>
+
+    <string name="cancle">取消</string>
+    <string name="title">请选择时间</string>
+    <string name="commit">确定</string>
+    <string name="year">年</string>
+    <string name="month">月</string>
+    <string name="day">日</string>
+    <string name="hour">时</string>
+    <string name="minute">分</string>
+
+    <string name="One">NFC添加食材</string>
+    <string name="Two">二维码添加食材</string>
+    <string name="Three">取食材</string>
+
+    <string name="scan_text">扫一扫</string>
+</resources>

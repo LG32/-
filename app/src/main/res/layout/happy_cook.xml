@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        app:title="菜单详情">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:clickable="true"
+            android:gravity="center"
+            android:padding="6dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wuhuarou"/>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="糖醋五花肉"
+            android:textColor="@color/black"
+            android:textSize="27dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="50dp"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="食材明细："
+        android:textSize="20dp"
+        android:textColor="@color/line"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主料：五花肉350g"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="辅料：玉米油适量、香叶1片、八角1瓣、桂皮2块、香葱2根、生姜4片、食盐1小勺、料酒1汤匙、酱油2汤匙、白糖3汤匙、香醋4汤匙、清水5汤匙"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="做法："
+        android:textSize="20dp"
+        android:textColor="@color/line"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1.备好食材"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2.将五花肉洗净"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3.稍冷冻一会切块备用"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="4.此时来准备调糖醋汁，碗中倒入：1汤匙料酒、2汤匙酱油、3汤匙白糖、4汤匙香醋、5汤匙清水，搅拌均匀"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5.锅热倒油，爆香葱姜调料后盛起，留底油放入五花肉"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="6.煸至两面焦黄，重新倒入调料和少许温水，加盖小火煮5~8分钟左右"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="7.待水汁不多时倒入刚调好的糖醋汁，加盖大火"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="8.滚开转小火、炖至五花肉熟烂时转大火收汁，加食盐调味，炒匀后关火出锅"
+        android:textSize="18dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        app:titleTextColor="@color/white"
+        app:title="管理冰箱">
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:elevation="6dp"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bridgetwo"/>
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="小小冰箱"
+            android:textSize="22dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/black"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="@color/secondary_text"
+        android:layout_marginTop="5dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fridgeactionmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            fab:menu_colorNormal="?attr/colorPrimary"
+            fab:menu_colorPressed="?attr/colorPrimary"
+            fab:menu_colorRipple="#99FFFFFF"
+            fab:menu_icon="@drawable/floataction_add">
+
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fridgeaddAction"
+                style="@style/floatactionbutton_style"
+                android:src="@drawable/floataction_list"
+                fab:fab_colorNormal="?attr/colorPrimary"
+                fab:fab_colorPressed="?attr/colorPrimary"
+                fab:fab_colorRipple="@color/gray"
+                fab:fab_label="添加冰箱" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fridgeDelectAction"
+                style="@style/floatactionbutton_style"
+                android:src="@drawable/floataction_grid"
+                fab:fab_colorNormal="?attr/colorPrimary"
+                fab:fab_colorPressed="?attr/colorPrimary"
+                fab:fab_colorRipple="@color/gray"
+                fab:fab_label="删除冰箱"/>
+        </com.github.clans.fab.FloatingActionMenu>
+    </RelativeLayout>
+</LinearLayout>

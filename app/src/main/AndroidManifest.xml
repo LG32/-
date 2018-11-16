@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.administrator.newfridge">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature android:name="android.hardware.camera.front" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-sdk android:minSdkVersion="10"/>
+    <uses-feature android:name="android.hardware.nfc" android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".widget.GuideActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".family.FamilyActivity"></activity>
+        <activity android:name=".qrcodeshow.QrshowActivity"></activity>
+        <activity android:name=".nfc.NfcActivity">
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.TECH_DISCOVERED"/>
+            </intent-filter>
+
+            <meta-data android:name="android.nfc.action.TECH_DISCOVERED"
+                android:resource="@xml/nfc" />
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".loginandregiste.LoginActivity"></activity>
+        <activity android:name=".loginandregiste.RegisteActivity"></activity>
+        <activity android:name=".qrcode.QRScannerActivity"></activity>
+        <activity android:name=".me.Meinformation"></activity>
+        <activity android:name=".food.FoodActivity"></activity>
+        <activity android:name=".foodmenu.FoodMenuActivity"></activity>
+        <activity android:name=".me.MeActivity"></activity>
+        <activity android:name=".record.RecordActivity"></activity>
+        <activity android:name=".foodmenu.FoodMenuShow"></activity>
+        <activity android:name=".fridgemanager.FridgeActivity"></activity>
+        <activity android:name=".fridgemanager.FridgeShowActivity"></activity>
+        <activity android:name=".food.FoodShowActivity"></activity>
+    </application>
+
+</manifest>
