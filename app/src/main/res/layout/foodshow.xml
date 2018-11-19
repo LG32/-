@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -10,74 +8,83 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
         android:background="@color/colorPrimary"
-        app:titleTextColor="@color/white">
-    </android.support.v7.widget.Toolbar>
+        app:titleTextColor="@color/white" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
 
-    <android.support.v7.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:clickable="true"
-        android:gravity="center"
-        android:padding="6dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        app:cardCornerRadius="10dp">
-
-        <ImageView
-            android:id="@+id/iv_cover"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/chicken"/>
-    </android.support.v7.widget.CardView>
-
-        <TextView
+        <android.support.v7.widget.CardView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="鸡腿肉"
-            android:textColor="@color/black"
-            android:textSize="30dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="6dp"
+            app:cardCornerRadius="10dp">
+
+            <ImageView
+                android:id="@+id/iv_food"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:contentDescription="@string/lose_img"
+                android:scaleType="centerCrop" />
+        </android.support.v7.widget.CardView>
+
+        <TextView
+            android:id="@+id/tv_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
     </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="     简介：鸡肉肉质细嫩，滋味鲜美，由于其味较淡，因此可使用于各种料理中。蛋白质的含量颇多，在肉之中，可以说是蛋白质最高的肉类之一，是属于高蛋白低脂肪的食品。钾硫酸氨基酸的含量颇多，因此可弥补牛及猪肉的不足。同时也由于鸡肉比其他肉类的维生素A含量多，而在量方面虽比蔬菜或肝脏差，但和牛肉和猪肉相比，其维生素A的含量却高出许多。 腿肉是从脚到腿的部位，及腿根一带的肉，其肉质颇坚硬，连皮一起摄取时，脂肪的含量较多，也是在整只鸡中铁分含量最多的一部分。"
-            android:textSize="15dp"
-            android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_food_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="      存放日期：2018-10-22"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_food_begin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="      保鲜到期日期：2018-10-25"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_food_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="      冷冻到期日期：2018-11-8"
-            android:textSize="18dp"
-            android:textColor="@color/black"/>
+    <TextView
+        android:id="@+id/tv_food_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
 </LinearLayout>

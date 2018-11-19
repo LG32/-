@@ -40,7 +40,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="16dp"
@@ -49,7 +48,7 @@
         fab:menu_colorPressed="?android:attr/colorPrimary"
         fab:menu_colorRipple="#99FFFFFF"
         fab:menu_icon="@drawable/floataction_add"
-        tools:targetApi="lollipop">
+        tools:ignore="RtlHardcoded">
 
 
         <com.github.clans.fab.FloatingActionButton
@@ -59,8 +58,7 @@
             fab:fab_colorNormal="?android:attr/colorPrimary"
             fab:fab_colorPressed="?android:attr/colorPrimary"
             fab:fab_colorRipple="@color/gray"
-            fab:fab_label="@string/One"
-            />
+            fab:fab_label="@string/One" />
 
         <com.github.clans.fab.FloatingActionButton
             android:id="@+id/menu_item_gridlayout"

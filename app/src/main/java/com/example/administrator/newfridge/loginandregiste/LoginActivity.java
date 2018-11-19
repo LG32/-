@@ -12,22 +12,30 @@ import android.widget.Button;
 import com.example.administrator.newfridge.MainActivity;
 import com.example.administrator.newfridge.R;
 
-public class LoginActivity extends AppCompatActivity {
-    private Button mbuttonfinish;
+public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        initView ();
+
+    }
+
+    private void initView(){
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        mbuttonfinish = findViewById(R.id.finish);
-        mbuttonfinish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
+        Button mbuttonfinish = findViewById ( R.id.finish );
+        mbuttonfinish.setOnClickListener ( this );
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId ()){
+            case R.id.finish:
                 Intent intent =  new Intent();
                 intent.setClass(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
-            }
-        });
+                break;
+        }
     }
 }

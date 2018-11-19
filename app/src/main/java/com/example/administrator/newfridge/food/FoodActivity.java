@@ -1,11 +1,8 @@
 package com.example.administrator.newfridge.food;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
@@ -13,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.administrator.newfridge.R;
+import com.example.administrator.newfridge.foodshow.FoodShowActivity;
 import com.example.administrator.newfridge.nfc.NfcActivity;
 import com.example.administrator.newfridge.qrcode.QRScannerActivity;
 import com.example.administrator.newfridge.widget.EmptyRecyclerView;
@@ -26,6 +24,7 @@ import java.util.List;
 
 public class FoodActivity extends AppCompatActivity implements View.OnClickListener {
 
+    //圆形悬浮按钮
     private FloatingActionButton mItemLinearlayout;
     private FloatingActionButton mItemGridlayout;
     private FloatingActionButton mItemStaggeredlayout;
@@ -117,7 +116,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         FoodModel foodModel7 = new FoodModel(7, "香菜", "存放时间：2018-10-22", "类别：蔬菜类",R.drawable.xiangcai);
         FoodModel foodModel8 = new FoodModel(8, "羊肉", "存放时间：2018-10-20", "类别：肉类",R.drawable.yangrou);
         FoodModel foodModel9 = new FoodModel(9, "红辣椒", "存放时间：2018-10-18", "类别：蔬菜类",R.drawable.honglajiao);
-        FoodModel foodModel10 =  new FoodModel(10,"苹果","存放时间：2018-10-19", "类别：水果类",R.drawable.apple);
+        FoodModel foodModel10 = new FoodModel(10,"苹果","存放时间：2018-10-19", "类别：水果类",R.drawable.apple);
         mList.add(foodModel1);
         mList.add(foodModel2);
         mList.add(foodModel3);

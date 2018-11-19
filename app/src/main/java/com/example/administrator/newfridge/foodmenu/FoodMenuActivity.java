@@ -2,7 +2,6 @@ package com.example.administrator.newfridge.foodmenu;
 
 import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -10,9 +9,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-
-
 import com.example.administrator.newfridge.R;
+import com.example.administrator.newfridge.foodmenushow.FoodMenuShowActivity;
 import com.example.administrator.newfridge.widget.EmptyRecyclerView;
 
 import java.util.ArrayList;
@@ -58,7 +56,7 @@ public class FoodMenuActivity extends AppCompatActivity {
             @Override
             public void onClick(int position, FoodMenu FoodMenu) {
                 Intent intent = new Intent();
-                intent.setClass(FoodMenuActivity.this,FoodMenuShow.class);
+                intent.setClass(FoodMenuActivity.this,FoodMenuShowActivity.class);
                 startActivity(intent);
             }
         });

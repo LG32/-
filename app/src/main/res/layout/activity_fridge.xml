@@ -9,27 +9,28 @@
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
+        android:layout_height="?android:attr/actionBarSize"
         android:background="@color/colorPrimary"
-        app:titleTextColor="@color/white"
-        app:title="创建冰箱">
+        app:title="创建冰箱"
+        app:titleTextColor="@color/white">
     </android.support.v7.widget.Toolbar>
 
     <EditText
-        android:id="@+id/telephone"
+        android:id="@+id/refrigerator_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:hint="请输入你的冰箱名称"
-        android:background="@drawable/editsharp"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/editsharp"
+        android:hint="请输入你的冰箱名称"
+        android:inputType="textPhonetic" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:textSize="20sp"
-        android:text="完成"/>
+        android:text="@string/finish"
+        android:textSize="20sp"/>
 </LinearLayout>
