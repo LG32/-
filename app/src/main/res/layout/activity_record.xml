@@ -67,7 +67,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <com.example.administrator.newfridge.record.AbilityMapView
+    <com.example.administrator.newfridge.view.adapter.AbilityMapView
         android:id="@+id/ability_map_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

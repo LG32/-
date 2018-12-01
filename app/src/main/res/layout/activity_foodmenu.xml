@@ -13,7 +13,7 @@
         android:background="@color/colorPrimary"
         app:titleTextColor="@color/white" />
 
-    <com.example.administrator.newfridge.widget.EmptyRecyclerView
+    <com.example.administrator.newfridge.view.adapter.EmptyRecyclerView
         android:id="@+id/fragment_recyclerview1"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

@@ -24,16 +24,16 @@
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
 
-        <activity android:name=".widget.GuideActivity">
+        <activity android:name=".view.activity.GuideActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".family.FamilyActivity" />
-        <activity android:name=".qrcodeshow.QrshowActivity" />
-        <activity android:name=".nfc.NfcActivity">
+        <activity android:name=".view.activity.MainActivity" />
+        <activity android:name=".view.activity.FamilyActivity" />
+        <activity android:name=".view.activity.QrshowActivity" />
+        <activity android:name=".tool.nfc.NfcActivity">
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -49,18 +49,18 @@
                 <action android:name="android.nfc.action.TAG_DISCOVERED"/>
             </intent-filter>
         </activity>
-        <activity android:name=".loginandregiste.LoginActivity" />
-        <activity android:name=".loginandregiste.RegisterActivity" />
-        <activity android:name=".qrcode.QRScannerActivity" />
-        <activity android:name=".me.Meinformation" />
-        <activity android:name=".food.FoodActivity" />
-        <activity android:name=".foodmenu.FoodMenuActivity" />
-        <activity android:name=".me.MeActivity" />
-        <activity android:name=".record.RecordActivity" />
-        <activity android:name=".foodmenushow.FoodMenuShowActivity" />
-        <activity android:name=".fridgemanager.FridgeActivity" />
-        <activity android:name=".fridgemanager.FridgeShowActivity" />
-        <activity android:name=".foodshow.FoodShowActivity" />
+        <activity android:name=".view.activity.LoginActivity" />
+        <activity android:name=".view.activity.RegisterActivity" />
+        <activity android:name=".tool.qrcode.QRScannerActivity" />
+        <activity android:name=".view.activity.MeInformation" />
+        <activity android:name=".view.activity.FoodActivity" />
+        <activity android:name=".view.activity.FoodMenuActivity" />
+        <activity android:name=".view.activity.MeActivity" />
+        <activity android:name=".view.activity.RecordActivity" />
+        <activity android:name=".view.activity.FoodMenuShowActivity" />
+        <activity android:name=".view.activity.FridgeActivity" />
+        <activity android:name=".view.activity.FridgeShowActivity" />
+        <activity android:name=".view.activity.FoodShowActivity" />
     </application>
 
 </manifest>

@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".food.FoodActivity">
+    tools:context=".view.activity.FoodActivity">
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
@@ -23,7 +23,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <com.example.administrator.newfridge.widget.EmptyRecyclerView
+        <com.example.administrator.newfridge.view.adapter.EmptyRecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
