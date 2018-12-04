@@ -14,7 +14,7 @@ public class UrlMap  {
 
     private void initMap(){
         urlMap.put ( "login", urlHead + "login/" );
-        urlMap.put ( "getiden", urlHead + "validations/getiden" );
+        urlMap.put ( "getiden", urlHead + "/validations/getiden" );
         urlMap.put ( "register", urlHead + "/validations/register" );
     }
 

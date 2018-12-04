@@ -44,4 +44,5 @@
     <string name="checkNew">检查更新</string>
     <string name="menu">收藏菜谱</string>
     <string name="family">家庭组</string>
+    <string name="username">用户名</string>
 </resources>
