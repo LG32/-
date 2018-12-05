@@ -1,6 +1,7 @@
 package com.example.administrator.newfridge.view.adapter;
 
 import android.content.Context;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -81,7 +82,7 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
     }
 
     class FoodViewHolder extends RecyclerView.ViewHolder {
-        LinearLayout linearLayout;
+        CardView cardView;
         ImageView imageView;
         TextView tv_title;
         TextView tv_nature;
@@ -91,11 +92,11 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         public FoodViewHolder(View itemView) {
             super(itemView);
             view = itemView;
-            linearLayout = itemView.findViewById(R.id.shiyan);
+            cardView = itemView.findViewById(R.id.shiyan);
             imageView = itemView.findViewById(R.id.iv_cover);
             tv_title =  itemView.findViewById(R.id.tv_title);
             tv_nature = itemView.findViewById(R.id.tv_nature);
-            tv_time = itemView.findViewById(R.id.tv_time);
+            tv_time = itemView.findViewById(R.id.tv_startTime);
         }
     }
 }

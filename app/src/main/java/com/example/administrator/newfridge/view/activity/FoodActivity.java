@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -59,6 +60,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         mItemStaggeredlayout.setOnClickListener(this);
         mRecyclerView = findViewById(R.id.recyclerview);
         mEmptyView = findViewById(R.id.empty_view);
+
     }
 
 
@@ -100,6 +102,8 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
      */
     private void initData() {
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager ( this, 2 );
+        mRecyclerView.setLayoutManager ( gridLayoutManager );
         //设置适配器
         mFoodAdapter = new FoodAdapter(this, mList);
         mRecyclerView.setAdapter(mFoodAdapter);

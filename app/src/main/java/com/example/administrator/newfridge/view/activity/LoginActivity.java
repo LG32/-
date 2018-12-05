@@ -21,13 +21,24 @@ import com.example.administrator.newfridge.okhttp.LoginRequest;
 import com.example.administrator.newfridge.tool.JsonTool;
 import com.example.administrator.newfridge.tool.MyHandlerMsg;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import okhttp3.FormBody;
 import okhttp3.RequestBody;
 
-public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
+public class LoginActivity extends AppCompatActivity {
 
-    private EditText telephone;
-    private EditText password;
+    @BindView(R.id.toolbar)
+    Toolbar toolbar;
+    @BindView(R.id.telephone)
+    EditText telephone;
+    @BindView(R.id.password)
+    EditText password;
+    @BindView(R.id.login)
+    Button login;
+    @BindView(R.id.sign)
+    Button sign;
     private LoginHandler loginHandler = new LoginHandler ();
     private SharedPreferences sharedPreferences;
 
@@ -35,20 +46,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_login );
-        initView ();
-        initValue ();
-    }
-
-    private void initView() {
-        Toolbar toolbar = findViewById ( R.id.toolbar );
+        ButterKnife.bind ( this );
         setSupportActionBar ( toolbar );
-        Button login = findViewById ( R.id.login );
-        Button sign = findViewById ( R.id.sign );
-
-        telephone = findViewById ( R.id.telephone );
-        password = findViewById ( R.id.password );
-        login.setOnClickListener ( this );
-        sign.setOnClickListener ( this );
+        initValue ();
     }
 
     private void initValue() {
@@ -59,37 +59,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         telephone.setText ( lastTel );
         password.setText ( lastPassword );
-    }
-
-    @SuppressLint("CommitPrefEdits")
-    @Override
-    public void onClick(View v) {
-        switch (v.getId ()) {
-            case R.id.login:
-
-                String str_telephone = telephone.getText ().toString ();
-                String str_password = password.getText ().toString ();
-                if (!str_password.equals ( "" ) && !str_telephone.equals ( "" )) {
-                    RequestBody requestBody = new FormBody.Builder ()
-                            .add ( "tel", str_telephone )
-                            .add ( "password", str_password )
-                            .build ();
-
-                    if (str_password.equals ( "123456" ) && str_telephone.equals ( "123456" )) {
-                        toMainActivity ();
-                    } else {
-                        new LoginRequest ( requestBody, loginHandler, sharedPreferences );
-                    }
-                } else {
-                    Toast.makeText ( this, "请输入完整的信息", Toast.LENGTH_SHORT )
-                            .show ();
-                }
-                break;
-
-            case R.id.sign:
-                toRegisterActivity ();
-                break;
-        }
     }
 
     public void toMainActivity() {
@@ -126,6 +95,36 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             case "2":
                 Toast.makeText ( LoginActivity.this, "该用户名不存在", Toast.LENGTH_SHORT )
                         .show ();
+                break;
+        }
+    }
+
+    @OnClick({R.id.login, R.id.sign})
+    public void onViewClicked(View view) {
+        switch (view.getId ()) {
+            case R.id.login:
+
+                String str_telephone = telephone.getText ().toString ();
+                String str_password = password.getText ().toString ();
+                if (!str_password.equals ( "" ) && !str_telephone.equals ( "" )) {
+                    RequestBody requestBody = new FormBody.Builder ()
+                            .add ( "tel", str_telephone )
+                            .add ( "password", str_password )
+                            .build ();
+
+                    if (str_password.equals ( "123456" ) && str_telephone.equals ( "123456" )) {
+                        toMainActivity ();
+                    } else {
+                        new LoginRequest ( requestBody, loginHandler, sharedPreferences );
+                    }
+                } else {
+                    Toast.makeText ( this, "请输入完整的信息", Toast.LENGTH_SHORT )
+                            .show ();
+                }
+                break;
+
+            case R.id.sign:
+                toRegisterActivity ();
                 break;
         }
     }

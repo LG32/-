@@ -40,4 +40,6 @@ dependencies {
     api 'com.android.support:design:27.1.1'
     api 'de.hdodenhof:circleimageview:2.1.0'
     api 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+    api 'com.jakewharton:butterknife:8.4.0'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.4.0'
 }
