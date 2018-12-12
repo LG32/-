@@ -9,11 +9,11 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.administrator.newfridge.R;
@@ -29,8 +29,6 @@ import okhttp3.RequestBody;
 
 public class LoginActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
     @BindView(R.id.telephone)
     EditText telephone;
     @BindView(R.id.password)
@@ -39,6 +37,9 @@ public class LoginActivity extends AppCompatActivity {
     Button login;
     @BindView(R.id.sign)
     Button sign;
+    @BindView(R.id.loading)
+    ProgressBar progressBar;
+
     private LoginHandler loginHandler = new LoginHandler ();
     private SharedPreferences sharedPreferences;
 
@@ -47,7 +48,6 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate ( savedInstanceState );
         setContentView ( R.layout.activity_login );
         ButterKnife.bind ( this );
-        setSupportActionBar ( toolbar );
         initValue ();
     }
 
@@ -103,6 +103,8 @@ public class LoginActivity extends AppCompatActivity {
     public void onViewClicked(View view) {
         switch (view.getId ()) {
             case R.id.login:
+                if (progressBar.getVisibility () == View.GONE)
+                    progressBar.setVisibility ( View.VISIBLE );
 
                 String str_telephone = telephone.getText ().toString ();
                 String str_password = password.getText ().toString ();
@@ -135,11 +137,15 @@ public class LoginActivity extends AppCompatActivity {
         public void handleMessage(Message msg) {
             switch (msg.what) {
                 case REQUEST_FAIL:
+                    if (progressBar.getVisibility () == View.VISIBLE)
+                        progressBar.setVisibility ( View.GONE );
                     Toast.makeText ( LoginActivity.this, "网络请求失败", Toast.LENGTH_SHORT )
                             .show ();
                     break;
 
                 case LOGIN_SUCCESS:
+                    if (progressBar.getVisibility () == View.GONE)
+                        progressBar.setVisibility ( View.VISIBLE );
                     JsonTool jsonTool = new JsonTool ( msg.obj.toString (), REQUEST_SUCCESS );
                     loginJudge ( jsonTool.judgeMsg () );
                     break;

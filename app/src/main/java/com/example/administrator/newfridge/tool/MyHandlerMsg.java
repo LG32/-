@@ -9,5 +9,7 @@ public interface MyHandlerMsg {
     int REGISTER_SUCCESS = 2;
     int GETIDEN_SUCCESS = 3;
     int REQUEST_SUCCESS = 4;
+    int GETICEID_SUCCESS = 5;
+    int GETFOOD_SUCCESS = 6;
 
 }

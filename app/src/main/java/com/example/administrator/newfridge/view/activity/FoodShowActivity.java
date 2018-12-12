@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.administrator.newfridge.R;
-import com.example.administrator.newfridge.model.FoodInfoBean;
+import com.example.administrator.newfridge.model.foodmodel.FoodInfoBean;
 
 import java.io.InputStream;
 

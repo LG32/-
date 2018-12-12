@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 import com.example.administrator.newfridge.R;
 import com.example.administrator.newfridge.view.adapter.FoodAdapter;
-import com.example.administrator.newfridge.model.FoodModel;
+import com.example.administrator.newfridge.model.foodmodel.FoodModel;
 import com.example.administrator.newfridge.tool.nfc.NfcActivity;
 import com.example.administrator.newfridge.tool.qrcode.QRScannerActivity;
 import com.example.administrator.newfridge.view.adapter.EmptyRecyclerView;
@@ -105,7 +105,7 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         GridLayoutManager gridLayoutManager = new GridLayoutManager ( this, 2 );
         mRecyclerView.setLayoutManager ( gridLayoutManager );
         //设置适配器
-        mFoodAdapter = new FoodAdapter(this, mList);
+//        mFoodAdapter = new FoodAdapter(this, mList);
         mRecyclerView.setAdapter(mFoodAdapter);
         mRecyclerView.setmEmptyView(mEmptyView);
         mRecyclerView.hideEmptyView();
@@ -129,14 +129,14 @@ public class FoodActivity extends AppCompatActivity implements View.OnClickListe
         mList.add(foodModel8);
         mList.add(foodModel9);
         mList.add(foodModel10);
-        mFoodAdapter.setOnFoodClickListener(new FoodAdapter.OnFoodClickListener(){
-            @Override
-            public void onClick(int position, FoodModel foodModel) {
-                Intent intent = new Intent();
-                intent.setClass(FoodActivity.this,FoodShowActivity.class);
-                startActivity(intent);
-            }
-        });
+//        mFoodAdapter.setOnFoodClickListener(new FoodAdapter.OnFoodClickListener(){
+//            @Override
+//            public void onClick(int position, FoodModel foodModel) {
+//                Intent intent = new Intent();
+//                intent.setClass(FoodActivity.this,FoodShowActivity.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 

@@ -11,6 +11,6 @@ public class GetIdenRequest {
 
     public GetIdenRequest(RequestBody requestBody, Handler handler){
         Log.i ( TAG, "开始验证码请求！" );
-        new PostRequest ( requestBody, KEY, handler );
+        new HttpRequest ( requestBody, KEY, handler );
     }
 }

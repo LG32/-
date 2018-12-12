@@ -1,7 +1,8 @@
-package com.example.administrator.newfridge.model;
+package com.example.administrator.newfridge.model.foodmodel;
 
 /**
  * Created by Administrator on 2018/2/27.
+ * 测试用foodmodel类，
  */
 
 public class FoodModel {

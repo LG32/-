@@ -27,12 +27,12 @@ public class LoginRequest{
 
     public LoginRequest(RequestBody requestBody, Handler loginHandler, SharedPreferences sharedPreferences ){
         Log.i ( TAG, "开始登陆请求！" );
-        new PostRequest ( requestBody, KEY, loginHandler, sharedPreferences );
+        new HttpRequest ( requestBody, KEY, loginHandler, sharedPreferences );
     }
 
     public LoginRequest(RequestBody requestBody, Handler loginHandler, Context context){
         Log.i ( TAG, "开始登陆请求！" );
-        new PostRequest ( requestBody, KEY, loginHandler, context );
+        new HttpRequest ( requestBody, KEY, loginHandler, context );
     }
 
 }

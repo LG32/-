@@ -16,6 +16,8 @@ public class MsgManager implements MyHandlerMsg {
         msgMap.put ( "login", LOGIN_SUCCESS );
         msgMap.put ( "getiden", GETIDEN_SUCCESS );
         msgMap.put ( "register", REGISTER_SUCCESS );
+        msgMap.put ( "getBoxId", GETICEID_SUCCESS );
+        msgMap.put ( "getFoodList", GETFOOD_SUCCESS );
     }
 
     public int getMsg(String key){

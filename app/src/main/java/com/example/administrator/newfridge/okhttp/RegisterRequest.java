@@ -11,7 +11,7 @@ public class RegisterRequest {
 
     public RegisterRequest(RequestBody requestBody, Handler loginHandler){
         Log.i ( TAG, "开始注册请求！" );
-        new PostRequest ( requestBody, KEY, loginHandler );
+        new HttpRequest ( requestBody, KEY, loginHandler );
     }
 
 }
